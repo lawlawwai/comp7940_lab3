@@ -32,9 +32,9 @@ def main():
     # To start the bot:
     # updater.start_polling()
     # updater.idle()
-    TOKEN=(config['TELEGRAM']['ACCESS_TOKEN'])
+    TOKEN = os.getenv('BOTAPIKEY')
     PORT = int(os.environ.get('PORT', '443'))
-    HOOK_URL = 'YOUR-CODECAPSULES-URL-HERE' + '/' + TOKEN
+    HOOK_URL = 'comp7940lab3-prqeki.aws-eu-1.ccdns.co' + '/' + TOKEN
     updater.start_webhook(listen='0.0.0.0', port=PORT, url_path=TOKEN, webhook_url=HOOK_URL)
     updater.idle()
 

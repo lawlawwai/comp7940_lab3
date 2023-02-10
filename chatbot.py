@@ -1,4 +1,6 @@
 ## chatbot.py
+import os
+
 import telegram
 from telegram import Location
 from telegram.ext import Updater, MessageHandler, Filters
@@ -28,8 +30,15 @@ def main():
     location_handler = MessageHandler(Filters.location, echo_location)
     dispatcher.add_handler(location_handler)
     # To start the bot:
-    updater.start_polling()
+    # updater.start_polling()
+    # updater.idle()
+    TOKEN=(config['TELEGRAM']['ACCESS_TOKEN'])
+    PORT = int(os.environ.get('PORT', '443'))
+    HOOK_URL = 'YOUR-CODECAPSULES-URL-HERE' + '/' + TOKEN
+    updater.start_webhook(listen='0.0.0.0', port=PORT, url_path=TOKEN, webhook_url=HOOK_URL)
     updater.idle()
+
+
 
 
 def echo(update, context):

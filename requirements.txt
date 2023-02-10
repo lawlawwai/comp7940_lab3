@@ -1,3 +1,16 @@
-telegram
-configparser
-redis
+APScheduler==3.6.3
+async-timeout==4.0.2
+cachetools==4.2.2
+certifi @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_477u68wvzm/croot/certifi_1671487773341/work/certifi
+configparser==5.3.0
+geographiclib==2.0
+geopy==2.3.0
+python-telegram-bot==13.7
+pytz==2022.7.1
+pytz-deprecation-shim==0.1.0.post0
+redis==4.5.1
+six==1.16.0
+telegram==0.0.1
+tornado==6.2
+tzdata==2022.7
+tzlocal==4.2
